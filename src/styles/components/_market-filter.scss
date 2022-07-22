@@ -1,0 +1,29 @@
+.filter-container {
+  height: rem(80px);
+  .filter-btn {
+    border: none;
+    color: #6c6c6c; // on hover #c4c4c4
+    background-color: #fff; // on hover #1c1c1c
+    padding: 7px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 20px;
+    margin: 3px 1px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    &:hover {
+      background-color: #1c1c1c;
+      color: #c4c4c4;
+    }
+  }
+  .first-btn {
+    background-color: #1c1c1c;
+    color: #c4c4c4;
+  }
+
+  .file-img {
+    width: 1.7em;
+  }
+}

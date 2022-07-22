@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Bahnschrift, sans-serif;
+  color: $clr3;
+  line-height: 1.8;
+  line-height: lh(26px);
+  height: 100vh;
+  @media (max-width: 1300px) {
+    font-size: 13px;
+  }
+}
+
+body {
+  margin: 0;
+  // background-color: $clr2;
+
+  @include for-normal-layout {
+    &.sidebar-open {
+      overflow: hidden;
+    }
+  }
+  ::-webkit-scrollbar {
+    width: 0.2em;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #d2d2d2;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+h1,
+h2,
+h3,
+h5,
+h6 {
+  font-weight: 500;
+  margin: 0 0 1rem;
+  line-height: lh(40px, 29px);
+}
+
+h1 {
+  font-size: rem(60px);
+}
+
+h2 {
+  font-size: em(16px);
+  margin: 0;
+  grid-area: title;
+  color: $clr2;
+  @include type(boldCondensed);
+}
+
+h3 {
+  font-size: em(29px);
+}
+
+h4 {
+  font-weight: 500;
+  margin: 0;
+}
+
+// img {
+// width: 100%;
+// }
+
+p {
+  margin: 0 0 1em;
+  max-width: 60ch;
+  @include type(light);
+  .main-text & {
+    grid-column: 3 / 6;
+    font-size: rem(22px);
+    line-height: 1.384615;
+    padding-inline-start: rem(30px);
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 8px;
+      height: 100%;
+      max-height: 42px;
+      background-color: $clr1;
+
+      @include for-wide-layout {
+        width: 10px;
+      }
+    }
+
+    @include for-wide-layout {
+      grid-column: 3 / 5;
+      font-size: rem(26px);
+    }
+  }
+}
+
+// links
+a {
+  color: $clr1;
+  &.hover {
+    cursor: pointer;
+  }
+}
+a:hover {
+  color: #111;
+  cursor: pointer;
+}
+
+mark {
+  color: $clr1;
+  background-color: transparent;
+}

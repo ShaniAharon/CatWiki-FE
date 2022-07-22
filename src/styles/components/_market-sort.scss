@@ -1,0 +1,37 @@
+.market-sort {
+  border-top: 2px solid #e6e6e6;
+  width: 100%;
+  height: 3rem;
+  background-color: $bg-grey;
+  .sort-list > li {
+    margin-right: 2.5em;
+  }
+  h4 {
+    font-size: 0.9em;
+  }
+  ul {
+    margin-inline-start: 2.1em;
+  }
+  .fa-caret-down {
+    color: #363636;
+    margin-inline-start: 0.4em;
+    font-size: 0.7em;
+  }
+  .fa-calendar {
+    font-size: 1.2em;
+  }
+  .calendar-container {
+    margin-left: 21.7rem;
+    .data-span {
+      text-align: start;
+    }
+    .cl-txt {
+      height: fit-content;
+      span {
+        font-size: 0.8em;
+        // font-weight: 600;
+        margin: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.chart {
+  margin-inline-start: 2em;
+  margin-inline-end: 2em;
+  margin-top: 1em;
+  position: relative;
+  .bubble-chart {
+    width: 50em;
+    height: 20em;
+  }
+  .chart-info {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    align-items: flex-start;
+    margin-top: 1.5rem;
+  }
+}

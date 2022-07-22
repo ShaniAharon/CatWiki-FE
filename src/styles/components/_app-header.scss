@@ -1,0 +1,50 @@
+.app-header {
+  background-color: $bg-grey;
+  align-items: center;
+  border-radius: 4px;
+  height: 2.9rem;
+  width: max-content;
+  .last {
+    margin-right: 2.5em;
+  }
+  .fa-angle-down {
+    font-size: 8px;
+    color: $header-drop-arrow;
+  }
+
+  .logo-img {
+    width: 4rem;
+    margin-inline-start: 0.5em;
+  }
+
+  .header-txt {
+    font-size: 10.6px;
+    color: #3a3a3a;
+  }
+
+  .line-container {
+    align-items: center;
+    display: flex;
+    .vl {
+      margin-inline-start: 1.1em;
+      margin-inline-end: 1.1em;
+      border-left: 1px solid #e8e8e8;
+      height: 23.2px;
+    }
+  }
+}
+
+.fa-circle {
+  color: #898989;
+  font-size: x-large;
+  margin-inline-end: 0.5em;
+}
+
+.circle-dots {
+  position: absolute;
+  left: 25.5rem;
+  top: 1.6rem;
+  @media (min-width: 1300px) {
+    left: 22.5rem;
+  }
+}

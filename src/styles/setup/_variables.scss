@@ -1,0 +1,40 @@
+// COLOR PALETTE
+//Colors:
+$bg-grey: #f8f8f8;
+//header hl - #e8e8e8
+$header-drop-arrow: #969696;
+//header circle border - #c7c7c7
+//header circle dots - #bababa
+//header right side circle bg- #898989
+
+//sorting bg color - #f8f8f8
+//sorting border-top - #e6e6e6
+//sorting cmp - text color - #565656
+//sorting buttons bg - #dadada
+//sorting dates color - #262626
+
+//filter btn bg - #1c1c1c
+//filter input border color - #efefef
+// filter icon color - #777777
+
+//list outer border color - #efefef
+//list inner border color - #eee
+//list item bg  - #777777
+
+$clr1: #767676;
+$clr2: #000;
+$clr3: #fff;
+$clr4: darken($clr3, 40%);
+$clr5: #2d2d2d;
+
+// LAYOUT
+$layoutPadding: 20px;
+
+// LAYOUT BREAKPOINTS
+$break-narrow: 1200px;
+$break-normal: 1360px;
+$break-wide: 1920px;
+
+$padded-break-narrow: $break-narrow + $layoutPadding * 2;
+$padded-break-normal: $break-normal + $layoutPadding * 2;
+$padded-break-wide: $break-wide + $layoutPadding * 2;
