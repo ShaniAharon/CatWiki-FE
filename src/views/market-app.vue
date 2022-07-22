@@ -2,12 +2,14 @@
   <header class="main-header main-layout-container">
     <section class="upper-header">
       <!-- <img class="logo-white" src="../assets/CatwikiLogo.svg" alt="" /> -->
-      <div class="logo-white"></div>
-      <h2 class="upper-text">
-        Get to know more about your <br />
-        cat breed
-      </h2>
-      <market-filter />
+      <div class="inner-container">
+        <div class="logo-white"></div>
+        <h2 class="upper-text">
+          Get to know more about your <br />
+          cat breed
+        </h2>
+        <market-filter />
+      </div>
     </section>
     <section class="below-header"></section>
   </header>

@@ -81,10 +81,12 @@
   width: 100%;
   height: 50%;
   position: relative;
-  .logo-white {
+  .inner-container {
     position: absolute;
     top: 100px;
     left: 50px;
+  }
+  .logo-white {
     background-color: white;
     height: 40px;
     width: 126px;
