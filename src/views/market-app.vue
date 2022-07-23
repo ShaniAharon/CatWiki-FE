@@ -12,6 +12,7 @@
       </div>
     </section>
     <section class="below-header flex">
+      <!-- TODO: change the position absolute to a container warp -->
       <div class="inner-content column g-4">
         <div class="flex">
           <div class="breeds-title">
