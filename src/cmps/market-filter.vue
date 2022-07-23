@@ -1,13 +1,11 @@
 <template>
-  <section
-    class="filter-container space-between main-layout-container flex align-center g-1"
-  >
-    <div class="search flex align-center g-1">
+  <section class="filter-container flex align-center">
+    <div class="search flex align-center">
       <input
         type="text"
         class="input-search"
         v-model="filterBy.label"
-        placeholder="Search "
+        placeholder="Enter your breed "
         @input="setFilter"
       />
     </div>

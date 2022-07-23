@@ -2,7 +2,7 @@
   <header class="main-header main-layout-container">
     <section class="upper-header">
       <!-- <img class="logo-white" src="../assets/CatwikiLogo.svg" alt="" /> -->
-      <div class="inner-container">
+      <div class="inner-container column g-1">
         <div class="logo-white"></div>
         <h2 class="upper-text">
           Get to know more about your <br />
@@ -11,7 +11,14 @@
         <market-filter />
       </div>
     </section>
-    <section class="below-header"></section>
+    <section class="below-header flex">
+      <div class="inner-content">
+        <div class="breeds-title">
+          66+ Breeds For you <br />
+          to discover
+        </div>
+      </div>
+    </section>
   </header>
 </template>
 

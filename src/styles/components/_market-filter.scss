@@ -1,29 +1,32 @@
 .filter-container {
   height: rem(80px);
-  .filter-btn {
+  .input-search[type='text'] {
+    width: rem(394.62px);
+    padding: 12px 20px;
+    margin: 8px 0;
+    height: rem(69.67px);
+    box-sizing: border-box;
+    background-color: #fff;
     border: none;
-    color: #6c6c6c; // on hover #c4c4c4
-    background-color: #fff; // on hover #1c1c1c
-    padding: 7px 22px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    border-radius: 20px;
-    margin: 3px 1px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    &:hover {
-      background-color: #1c1c1c;
-      color: #c4c4c4;
+    border: 1px solid #f0f0f0;
+    transition: 0.2s;
+    outline: none;
+    border-radius: 59px;
+    background-image: url('@/assets/‏‏search-icon.png');
+    background-position: 280px 16px;
+    background-size: 22px;
+    background-repeat: no-repeat;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #767676;
+    &:focus {
+      border: 1px solid #e0e0e0;
+      background-color: #ffffff;
     }
-  }
-  .first-btn {
-    background-color: #1c1c1c;
-    color: #c4c4c4;
-  }
-
-  .file-img {
-    width: 1.7em;
+    //color for the fonts #767676
+    @media screen and (max-width: 600px) {
+      width: 186px;
+    }
   }
 }
