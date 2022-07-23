@@ -12,10 +12,18 @@
       </div>
     </section>
     <section class="below-header flex">
-      <div class="inner-content">
-        <div class="breeds-title">
-          66+ Breeds For you <br />
-          to discover
+      <div class="inner-content column g-4">
+        <div class="flex">
+          <div class="breeds-title">
+            66+ Breeds For you <br />
+            to discover
+          </div>
+          <button class="btn btn-more">See More -></button>
+        </div>
+        <div class="cat-img-conatiner g-3 flex">
+          <img src="../assets/image 1.png" alt="" />
+          <img src="../assets/image 2.png" alt="" />
+          <img src="../assets/image 3.png" alt="" />
         </div>
       </div>
     </section>

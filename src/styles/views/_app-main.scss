@@ -108,11 +108,33 @@
 .below-header {
   background-color: #e3e1dc;
   height: 50%;
+  width: 100%;
   // justify-content: center;
   // align-items: center;
   .inner-content {
     position: absolute;
     left: 50px;
+    .btn-more {
+      align-self: flex-end;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22px;
+      background-color: #e3e1dc;
+      text-transform: uppercase;
+      /* identical to box height */
+
+      text-align: right;
+
+      color: rgba(41, 21, 7, 0.6);
+    }
+  }
+  .cat-img-conatiner {
+    img {
+      width: rem(220px);
+      height: rem(220px);
+    }
   }
   .breeds-title {
     text-align: start;
@@ -123,6 +145,7 @@
     line-height: 59px;
     color: #291507;
   }
+
   // border-radius: 25px;
   //font color #291507
   //see more color #73675c
