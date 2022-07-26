@@ -13,7 +13,7 @@
     </section>
     <section class="below-header flex">
       <!-- TODO: change the position absolute to a container warp -->
-      <div class="inner-content column g-4">
+      <div class="column g-4">
         <div class="flex">
           <div class="breeds-title">
             66+ Breeds For you <br />
@@ -28,6 +28,7 @@
         </div>
       </div>
     </section>
+    <test />
   </header>
 </template>
 
@@ -39,6 +40,7 @@
   import marketSort from '../cmps/market-sort.vue'
   import chart from '../cmps/chart.vue'
   import MarketFilter from '../cmps/market-filter.vue'
+  import test from '../cmps/test.vue'
 
   export default {
     name: 'MarketApp',
@@ -50,6 +52,7 @@
       marketSort,
       chart,
       MarketFilter,
+      test,
     },
     data() {
       return {}
