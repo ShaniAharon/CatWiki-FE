@@ -113,10 +113,28 @@
   border-bottom-left-radius: 46px;
   border-bottom-right-radius: 46px;
 
+  .title-in {
+    font-weight: bold;
+    text-align: start;
+  }
+  .small-line {
+    width: 59.18px;
+    height: 3.21px;
+    background: #4d270c;
+    border-radius: 77px;
+  }
+  .breeds-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .btn-more {
+    align-items: flex-end;
+  }
   .cat-img-conatiner {
     img {
-      width: rem(300px);
-      height: rem(300px);
+      width: rem(220px);
+      height: rem(220px);
     }
   }
   .breeds-title {
