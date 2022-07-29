@@ -11,9 +11,9 @@
         <market-filter />
       </div>
     </section>
-    <section class="below-header flex">
+    <section class="below-header max-width-container flex">
       <!-- TODO: change the position absolute to a container warp -->
-      <div class="max-width-container">
+      <div class="">
         <div class="column g-4">
           <div class="flex">
             <div class="breeds-title">
