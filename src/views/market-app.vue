@@ -2,7 +2,7 @@
   <header class="main-header main-layout-container">
     <section class="upper-header">
       <!-- <img class="logo-white" src="../assets/CatwikiLogo.svg" alt="" /> -->
-      <div class="max-width-container column g-1">
+      <div class="upper-header-content max-width-container column g-1">
         <div class="logo-white"></div>
         <h2 class="upper-text">
           Get to know more about your <br />
