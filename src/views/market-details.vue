@@ -1,6 +1,29 @@
 <template>
   <section v-if="breed">
-    <pre>{{ breed }}</pre>
+    <!-- <pre>{{ breed }}</pre> -->
+    <div class="flex">
+      <img :src="breed.image.url" alt="" />
+      <div>
+        <h2>{{ breed.name }}</h2>
+        <p>{{ breed.description }}</p>
+        <h2>
+          Temperament:
+          {{ breed.temperament }}
+        </h2>
+        <h2>Origin: {{ breed.origin }}</h2>
+        <h2>Life Span: {{ breed.life_span }} years</h2>
+        <h2>Adaptability: {{ breed.adaptability }}</h2>
+        <h2>Affection Level: {{ breed.affection_level }}</h2>
+        <h2>Child Friendly: {{ breed.child_friendly }}</h2>
+        <h2>Grooming: {{ breed.grooming }}</h2>
+        <h2>Intelligence: {{ breed.intelligence }}</h2>
+        <h2>Health Issues: {{ breed.health_issues }}</h2>
+        <h2>Health Issues: {{ breed.health_issues }}</h2>
+        <h2>Social Needs: {{ breed.social_needs }}</h2>
+        <h2>Social Needs: {{ breed.social_needs }}</h2>
+        <h2>Stranger Friendly: {{ breed.stranger_friendly }}</h2>
+      </div>
+    </div>
   </section>
 </template>
 
