@@ -24,6 +24,12 @@
         <h2>Stranger Friendly: {{ breed.stranger_friendly }}</h2>
       </div>
     </div>
+    <div v-if="imgs">
+      <h2>Other photos</h2>
+      <div v-for="img in imgs">
+        <img :src="img" alt="" />
+      </div>
+    </div>
   </section>
 </template>
 
@@ -34,10 +40,15 @@
     data() {
       return {
         breed: null,
-        isShow: true,
+        imgs: null,
       }
     },
-    created() {},
+    async created() {
+      this.imgs = await this.$store.dispatch({
+        type: 'getImgs',
+        breedId: this.breedId,
+      })
+    },
     methods: {
       async loadBreed() {
         if (!this.breedId) return // prevent the run of the watcher when change route
@@ -52,10 +63,6 @@
       //opt 2 use computed for the breedId
       breedId() {
         return this.$route.params.breedId
-      },
-      showBreed() {
-        console.log(this.breed)
-        return this.breed.imgUrl
       },
     },
     //opt1 use the param specf as the func

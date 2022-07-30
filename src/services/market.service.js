@@ -10,6 +10,10 @@ async function getBreeds() {
   return await httpService.get(`${ENDPOINT}/breeds`);
 }
 
+async function getBreedImgs(breedId) {
+  return await httpService.get(`${ENDPOINT}/breeds/img`, { breedId });
+}
+
 async function getById(photoId) {
   return await httpService.get(`${ENDPOINT}/${photoId}`);
 }
@@ -45,6 +49,7 @@ export const marketService = {
   getEmptyPhoto,
   remove,
   save,
-  getBreeds
+  getBreeds,
+  getBreedImgs
   // addReview
 };

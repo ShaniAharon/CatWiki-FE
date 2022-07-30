@@ -83,6 +83,13 @@ export default {
       //   commit({type: 'setIsLoading', isLoading: false});
       // }
     },
+    async getImgs({ commit }, { breedId }) {
+      const breedImgs = await marketService.getBreedImgs(breedId)
+      //TODO: can save in map obj all the imgs we got , to prevent a multi calls 
+      console.log('breedImgs', breedImgs);
+      return breedImgs
+
+    },
     async saveMarket({ commit }, { market }) {
       try {
         const savedMarket = await marketService.save(market)
