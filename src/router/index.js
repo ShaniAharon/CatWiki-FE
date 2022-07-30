@@ -16,7 +16,7 @@ const router = createRouter({
       component: marketEdit,
     },
     {
-      path: '/market/:marketId?',
+      path: '/market/:breedId?',
       component: marketDetails,
     },
   ],

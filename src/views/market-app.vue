@@ -28,7 +28,12 @@
           </div>
           <div class="cat-img-conatiner g-5 flex" v-if="homeBreeds">
             <div class="column g-1" v-for="breed in homeBreeds">
-              <img class="cat-img" :src="breed.image.url" alt="" />
+              <img
+                class="cat-img"
+                @click="goToDetails(breed.id)"
+                :src="breed.image.url"
+                alt=""
+              />
               <h4 class="title-in">{{ breed.name }}</h4>
             </div>
           </div>
@@ -86,6 +91,9 @@
     methods: {
       removeMarket(marketId) {
         this.$store.dispatch({type: 'removeMarket', id: marketId})
+      },
+      goToDetails(breedId) {
+        this.$router.push(`/market/${breedId}`)
       },
       setFilter(filterBy) {
         this.$store.dispatch({type: 'filter', filterBy})

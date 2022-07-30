@@ -74,6 +74,12 @@
   position: relative;
 }
 
+header {
+  .logo-img {
+    cursor: pointer;
+  }
+}
+
 .upper-header {
   background-image: url(/src/assets/HeroImagelg.png);
   background-size: cover;

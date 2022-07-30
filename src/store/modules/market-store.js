@@ -1,3 +1,4 @@
+import { breedService } from '../../services/breed.service.js';
 import { marketService } from '../../services/market.service.js';
 
 export default {
@@ -69,7 +70,8 @@ export default {
       //breeds we want beng , sava , norw, srex
       try {
         const selects = ['beng', 'sava', 'norw', 'srex']
-        const breeds = await marketService.getBreeds();
+        const breeds = await breedService.query() || await marketService.getBreeds();
+        breedService.createBreeds(breeds)
         const homeBreeds = breeds.filter(br => selects.includes(br.id))
         console.log('store breeds', breeds);
         commit({ type: 'setBreeds', breeds });
@@ -104,6 +106,13 @@ export default {
     async getMarketById(context, { marketId }) {
       try {
         return await marketService.getById(marketId);
+      } catch (err) {
+        console.log(err);
+      }
+    },
+    async getBreedById(context, { breedId }) {
+      try {
+        return await breedService.getById(breedId);
       } catch (err) {
         console.log(err);
       }

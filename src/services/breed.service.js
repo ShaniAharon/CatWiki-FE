@@ -8,7 +8,7 @@ export const breedService = {
   getById,
   remove,
   save,
-  getEmptyBreed,
+  createBreeds
 };
 
 // _createBreeds();
@@ -46,6 +46,10 @@ async function save(breed) {
   } catch (e) {
     console.error(e)
   }
+}
+
+function createBreeds(breeds) {
+  storageService.initBreeds(KEY, breeds)
 }
 
 // function getEmptyBreed(name = '', price = 100) {

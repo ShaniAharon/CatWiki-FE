@@ -5,6 +5,7 @@ export const storageService = {
   put,
   remove,
   postMany,
+  initBreeds
 };
 
 function query(entityType) {
@@ -12,9 +13,13 @@ function query(entityType) {
   return Promise.resolve(entities);
 }
 
+function initBreeds(entityType, entities) {
+  _save(entityType, entities)
+}
+
 function get(entityType, entityId) {
   return query(entityType).then((entities) =>
-    entities.find((entity) => entity._id === entityId)
+    entities.find((entity) => entity?._id || entity.id === entityId)
   );
 }
 function post(entityType, newEntity) {

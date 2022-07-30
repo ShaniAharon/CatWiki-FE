@@ -1,63 +1,53 @@
 <template>
-  <div v-if="isShow && market" @click="closeModal" class="modal">
-    <form @submit.prevent class="form-details">
-      <h1>{{ market?.label }} market details</h1>
-      {{ market }}
-      <div class="img-container">
-        <img class="details-img" v-if="market" :src="showMarket" alt="" />
-      </div>
-    </form>
-  </div>
+  <section v-if="breed">
+    <pre>{{ breed }}</pre>
+  </section>
 </template>
 
 <script>
   export default {
-    name: 'MarketDetails',
+    name: 'BreedDetails',
     components: {},
     data() {
       return {
-        market: null,
+        breed: null,
         isShow: true,
       }
     },
     created() {},
     methods: {
-      async loadMarket() {
-        if (!this.marketId) return // prevent the run of the watcher when change route
-        const market = await this.$store.dispatch({
-          type: 'getMarketById',
-          marketId: this.marketId,
+      async loadBreed() {
+        if (!this.breedId) return // prevent the run of the watcher when change route
+        const breed = await this.$store.dispatch({
+          type: 'getBreedById',
+          breedId: this.breedId,
         })
-        this.market = market
-        this.isShow = true
-      },
-      closeModal() {
-        this.$emit('closeDetails')
+        this.breed = breed
       },
     },
     computed: {
-      //opt 2 use computed for the marketId
-      marketId() {
-        return this.$route.params.marketId
+      //opt 2 use computed for the breedId
+      breedId() {
+        return this.$route.params.breedId
       },
-      showMarket() {
-        console.log(this.market)
-        return this.market.imgUrl
+      showBreed() {
+        console.log(this.breed)
+        return this.breed.imgUrl
       },
     },
     //opt1 use the param specf as the func
     //   watch: {
-    //     '$route.params.marketId'(id) {
+    //     '$route.params.breedId'(id) {
     //       console.log('Changed to', id);
-    //       this.loadMarket();
+    //       this.loadBreed();
     //     },
     //   },
     //opt 2
     watch: {
-      // when the computed marketId run the watch handler also run
-      marketId: {
+      // when the computed breedId run the watch handler also run
+      breedId: {
         handler() {
-          this.loadMarket()
+          this.loadBreed()
         },
         immediate: true, //to also run the watch on the start / run eagerly
       },
