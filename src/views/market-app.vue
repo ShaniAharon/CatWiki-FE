@@ -27,19 +27,19 @@
             </div>
           </div>
           <div class="cat-img-conatiner g-5 flex">
-            <div class="column">
+            <div class="column g-1">
               <img src="../assets/image 1.png" alt="" />
               <h4 class="title-in">Bengal</h4>
             </div>
-            <div class="column">
+            <div class="column g-1">
               <img src="../assets/image 1.png" alt="" />
               <h4 class="title-in">Bengal</h4>
             </div>
-            <div class="column">
+            <div class="column g-1">
               <img src="../assets/image 1.png" alt="" />
               <h4 class="title-in">Bengal</h4>
             </div>
-            <div class="column">
+            <div class="column g-1">
               <img src="../assets/image 1.png" alt="" />
               <h4 class="title-in">Bengal</h4>
             </div>
@@ -48,6 +48,27 @@
       </div>
     </section>
   </header>
+  <section class="lower-section flex main-layout-container max-width-container">
+    <div class="info-container align-start column g-1">
+      <span class="small-line"></span>
+      <h2 class="title">
+        Why should you <br />
+        have a cat?
+      </h2>
+      <p class="info-para">
+        Having a cat around you can actually <br />
+        trigger the release of calming chemicals in <br />
+        your body which lower stress and <br />
+        anxiety levels
+      </p>
+      <button>Read More -></button>
+    </div>
+    <div class="img-gallery">
+      <img class="item-1" src="../assets/image 2.png" alt="" />
+      <img class="item-2" src="../assets/image 3.png" alt="" />
+      <img class="item-3" src="../assets/image 1.png" alt="" />
+    </div>
+  </section>
 </template>
 
 <script>

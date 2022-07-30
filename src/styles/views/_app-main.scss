@@ -117,12 +117,7 @@
     font-weight: bold;
     text-align: start;
   }
-  .small-line {
-    width: 59.18px;
-    height: 3.21px;
-    background: #4d270c;
-    border-radius: 77px;
-  }
+
   .breeds-container {
     display: flex;
     justify-content: space-between;
@@ -151,4 +146,80 @@
   //font color #291507
   //see more color #73675c
   //under cat pic color #291507
+}
+
+.lower-section {
+  margin-top: 4rem;
+  margin-bottom: 100px;
+  .info-container {
+    align-items: flex-start;
+    width: 50%;
+    justify-content: center;
+    gap: 20px;
+    .title {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 59px;
+      margin: 0;
+      margin-bottom: 20px;
+
+      color: #291507;
+    }
+    .info-para {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      color: #291507;
+    }
+  }
+  .img-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 100px;
+    width: 50%;
+    gap: 40px;
+    img {
+      width: rem(220px);
+    }
+    .item-1 {
+      grid-column: 1/2;
+      width: rem(320px);
+    }
+    .item-3 {
+      grid-row: 2/2;
+      margin-left: 100px;
+      margin-top: -161px;
+    }
+  }
+}
+
+.small-line {
+  width: 59.18px;
+  height: 3.21px;
+  background: #4d270c;
+  border-radius: 77px;
+}
+
+footer {
+  background-color: #111;
+  color: #efefef;
+  margin-top: 20px;
+  height: 96px;
+  border-top-left-radius: 46px;
+  border-top-right-radius: 46px;
+  .logo-img-footer {
+    background-color: white;
+    margin-top: 6px;
+    height: 40px;
+    width: 127px;
+    -webkit-mask-image: url(/src/assets/CatwikiLogo.svg);
+    mask-image: url(/src/assets/CatwikiLogo.svg);
+    background-repeat: no-repeat;
+  }
 }
