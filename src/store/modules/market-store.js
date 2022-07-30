@@ -73,9 +73,7 @@ export default {
         const breeds = await breedService.query() || await marketService.getBreeds();
         breedService.createBreeds(breeds)
         const homeBreeds = breeds.filter(br => selects.includes(br.id))
-        console.log('store breeds', breeds);
         commit({ type: 'setBreeds', breeds });
-        console.log('homeBreeds', homeBreeds);
         commit({ type: 'setHomeBreeds', homeBreeds });
       } catch (err) {
         console.error('Cannot Load breeds', err);
