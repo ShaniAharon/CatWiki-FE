@@ -26,24 +26,13 @@
               <button class="btn btn-more">See More -></button>
             </div>
           </div>
-          <div class="cat-img-conatiner g-5 flex">
-            <div class="column g-1">
-              <img src="../assets/image 1.png" alt="" />
-              <h4 class="title-in">Bengal</h4>
-            </div>
-            <div class="column g-1">
-              <img src="../assets/image 1.png" alt="" />
-              <h4 class="title-in">Bengal</h4>
-            </div>
-            <div class="column g-1">
-              <img src="../assets/image 1.png" alt="" />
-              <h4 class="title-in">Bengal</h4>
-            </div>
-            <div class="column g-1">
-              <img src="../assets/image 1.png" alt="" />
-              <h4 class="title-in">Bengal</h4>
+          <div class="cat-img-conatiner g-5 flex" v-if="homeBreeds">
+            <div class="column g-1" v-for="breed in homeBreeds">
+              <img class="cat-img" :src="breed.image.url" alt="" />
+              <h4 class="title-in">{{ breed.name }}</h4>
             </div>
           </div>
+          <div v-else>Loading...</div>
         </div>
       </div>
     </section>
@@ -105,6 +94,9 @@
     computed: {
       markets() {
         return this.$store.getters.markets
+      },
+      homeBreeds() {
+        return this.$store.getters.homeBreeds
       },
     },
     unmounted() {},

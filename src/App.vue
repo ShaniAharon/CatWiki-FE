@@ -9,12 +9,12 @@
 <script>
   import appHeader from './cmps/app-header.vue'
   import appFooter from './cmps/app-footer.vue'
-  import AppFooter from './cmps/app-footer.vue'
   export default {
     created() {
       this.$store.dispatch({type: 'loadMarkets'})
+      this.$store.dispatch({type: 'loadBreeds'})
     },
-    components: {appHeader, appFooter, AppFooter},
+    components: {appHeader, appFooter},
   }
 </script>
 

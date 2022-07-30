@@ -1,78 +1,50 @@
-import { storageService } from './async-storage.service.js';
-import { utilService } from './util.service.js';
+import { httpService } from './http.service.js';
 
-const KEY = 'marketDB';
+const ENDPOINT = 'photo';
+
+async function query(filterBy) {
+  return await httpService.get(ENDPOINT, filterBy);
+}
+
+async function getBreeds() {
+  return await httpService.get(`${ENDPOINT}/breeds`);
+}
+
+async function getById(photoId) {
+  return await httpService.get(`${ENDPOINT}/${photoId}`);
+}
+
+async function remove(photoId) {
+  return await httpService.delete(`${ENDPOINT}/${photoId}`);
+}
+
+async function save(photo) {
+  // const photo = JSON.parse(JSON.stringify(photo));
+  if (photo._id) {
+    return await httpService.put(`${ENDPOINT}/${photo._id}`, photo);
+  } else {
+    return await httpService.post(ENDPOINT, photo);
+  }
+}
+
+// async function addReview(photoId, review) {
+//     return await httpService.post(`${ENDPOINT}/${photoId}/review`, review);
+// }
+
+function getEmptyPhoto() {
+  const empty = {
+    label: '',
+    imgUrl: '',
+  };
+  return empty;
+}
 
 export const marketService = {
   query,
   getById,
+  getEmptyPhoto,
   remove,
   save,
-  getEmptyMarket,
+  getBreeds
+  // addReview
 };
-
-_createMarkets();
-
-async function query() {
-  try {
-    return await storageService.query(KEY);
-  } catch (e) {
-    console.error(e)
-  }
-}
-
-async function getById(id) {
-  try {
-    return await storageService.get(KEY, id);
-  } catch (e) {
-    console.error(e)
-  }
-}
-
-async function remove(id) {
-  try {
-    return await storageService.remove(KEY, id);
-  } catch (e) {
-    console.error(e)
-  }
-}
-
-async function save(market) {
-  try {
-    const savedMarket = market._id
-      ? await storageService.put(KEY, market)
-      : await storageService.post(KEY, market);
-    return savedMarket;
-  } catch (e) {
-    console.error(e)
-  }
-}
-
-function getEmptyMarket(name = '', price = 100) {
-  return {
-    _id: '',
-    name,
-    price,
-    createdAt: Date.now(),
-    reviews: ['good', 'great', 'fine'],
-  };
-}
-
-// Create Test Data:
-function _createMarkets() {
-  let markets = JSON.parse(localStorage.getItem(KEY));
-  if (!markets || !markets.length) {
-    markets = []
-    for (let i = 0; i < 100; i++) {
-      markets.push(_createMarket('Apple'))
-    }
-    localStorage.setItem(KEY, JSON.stringify(markets));
-  }
-  return markets;
-}
-
-function _createMarket(name) {
-  const market = getEmptyMarket(name, utilService.getRandomInt(80, 300));
-  market._id = utilService.makeId();
-  return market;
-}

@@ -130,6 +130,8 @@
     img {
       width: rem(220px);
       height: rem(220px);
+      object-fit: cover;
+      border-radius: 20px;
     }
   }
   .breeds-title {
