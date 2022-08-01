@@ -70,7 +70,8 @@ export default {
       //breeds we want beng , sava , norw, srex
       try {
         const selects = ['beng', 'sava', 'norw', 'srex']
-        const breeds = await breedService.query() || await marketService.getBreeds();
+        let breeds = await breedService.query()
+        if (!breeds.length) breeds = await marketService.getBreeds()
         breedService.createBreeds(breeds)
         const homeBreeds = breeds.filter(br => selects.includes(br.id))
         commit({ type: 'setBreeds', breeds });
